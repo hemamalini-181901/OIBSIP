@@ -1,0 +1,119 @@
+NMAP SCAN RESULTS
+=================
+
+Target:
+127.0.0.1 (localhost)
+
+Operating System:
+Microsoft Windows 11
+OS Details:
+Microsoft Windows 11 24H2 - 25H2
+
+Device Type:
+General purpose
+
+Network Distance:
+0 hops
+
+
+OPEN PORTS
+==========
+
+1. Port 135/tcp
+Service: msrpc
+Detected Service: Microsoft Windows RPC
+
+Description:
+This port is associated with Microsoft Windows RPC services.
+
+Security Consideration:
+Open RPC services can increase the attack surface of a Windows system.
+Only required services should be exposed.
+
+
+2. Port 445/tcp
+Service: microsoft-ds
+
+Description:
+This port is commonly associated with Microsoft Windows file and
+network sharing services.
+
+Security Consideration:
+An unnecessarily exposed file-sharing service can increase security risk.
+Access should be restricted to trusted networks.
+
+
+3. Port 1521/tcp
+Service: oracle-tns
+Version: Oracle TNS Listener 11.2.0.2.0
+
+Description:
+This port is used by the Oracle TNS listener for Oracle database
+connections.
+
+Security Consideration:
+Database listener ports should not be unnecessarily exposed.
+Access should be restricted and authentication/security controls
+should be properly configured.
+
+
+4. Port 3306/tcp
+Service: mysql
+Version: MySQL 8.0.41
+
+Description:
+This port is commonly used by MySQL database servers.
+
+Security Consideration:
+A database port exposed unnecessarily can allow unwanted connection
+attempts. Access should be restricted to trusted hosts.
+
+
+5. Port 7070/tcp
+Service: realserver?
+
+Description:
+Nmap identified this port as realserver, but the question mark
+indicates that the service identification is uncertain.
+
+Security Consideration:
+The actual application using this port should be identified and
+reviewed. Unnecessary services should be disabled.
+
+
+6. Port 8080/tcp
+Service: http
+Detected Service:
+Oracle XML DB Enterprise Edition httpd
+
+Description:
+Port 8080 is being used for an HTTP service according to Nmap.
+
+Security Consideration:
+HTTP services should be reviewed for authentication, access control,
+and secure configuration.
+
+
+7. Port 16992/tcp
+Service: amt-soap-http?
+
+Description:
+Nmap identified this as AMT SOAP HTTP, but the question mark indicates
+that the identification is uncertain.
+
+Security Consideration:
+The service should be verified and disabled if it is not required.
+Access should be restricted where appropriate.
+
+
+SUMMARY
+=======
+
+The Nmap scan identified 7 open TCP ports on the local Windows 11
+machine. The detected services include Windows RPC, Microsoft-DS,
+Oracle TNS, MySQL, HTTP, and other services whose identification was
+uncertain.
+
+Open ports increase the attack surface of a system. Unnecessary
+services should be disabled, and required services should be properly
+secured and restricted.
